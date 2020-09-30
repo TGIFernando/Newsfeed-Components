@@ -114,18 +114,28 @@ const data = [{
   Refresh the page to see the new article.
 */
 function articleMaker() {
+    //initalize vars for elements
     const mainDiv = document.createElement('div')
     const title = document.createElement('h2')
     const p1 = document.createElement('p')
     const p2 = document.createElement('p')
     const p3 = document.createElement('p')
     const buttn = document.createElement('span')
+    const date = document.createElement('p')
 
+    //laying out elements
     mainDiv.appendChild(title)
+    mainDiv.appendChild(date)
     mainDiv.appendChild(p1)
     mainDiv.appendChild(p2)
     mainDiv.appendChild(p3)
     mainDiv.appendChild(buttn)
+
+    //adding classes to elements
+    mainDiv.classList.add('article')
+    date.classList.add('date')
+    buttn.classList.add('expandButton')
+
     return mainDiv
 }
 
