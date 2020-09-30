@@ -152,8 +152,10 @@ function articleMaker(titlee, datee, firstParagraphh, secondParagraphh, thirdPar
     //returns the main div
     return mainDiv
 }
+//This is where i want to append my articles
 acc = document.querySelector('.articles')
 
+//my custom article to add to the data set
 myArticle = {
     title: 'This is a test article',
     date: 'September 30th, 2020',
@@ -163,6 +165,7 @@ myArticle = {
 }
 data.push(myArticle)
 
+//going through the data set and adding articles to page
 data.forEach(obj => {
     const { title, date, firstParagraph, secondParagraph, thirdParagraph } = obj
     const article = articleMaker(title, date, firstParagraph, secondParagraph, thirdParagraph)
