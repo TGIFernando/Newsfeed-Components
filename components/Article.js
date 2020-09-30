@@ -113,7 +113,7 @@ const data = [{
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
-function articleMaker() {
+function articleMaker(data) {
     //initalize vars for elements
     const mainDiv = document.createElement('div')
     const title = document.createElement('h2')
@@ -136,7 +136,20 @@ function articleMaker() {
     date.classList.add('date')
     buttn.classList.add('expandButton')
 
+    //adding text to elements
+    title.textContent = data.title
+    date.textContent = data.date
+    p1.textContent = data.firstParagraph
+    p2.textContent = data.secondParagraph
+    p3.textContent = data.thirdParagraph
+    buttn.textContent = '+'
+
+    //adding event listener to button
+    buttn.addEventListener('click', () => {
+        mainDiv.classList.toggle('article-open')
+    });
+
     return mainDiv
 }
 
-console.log(articleMaker());
+console.log(articleMaker(data[1]));
