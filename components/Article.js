@@ -153,6 +153,16 @@ function articleMaker(titlee, datee, firstParagraphh, secondParagraphh, thirdPar
     return mainDiv
 }
 acc = document.querySelector('.articles')
+
+myArticle = {
+    title: 'This is a test article',
+    date: 'September 30th, 2020',
+    firstParagraph: 'This is a test for the first paragraph',
+    secondParagraph: 'This is a test for the second paragraph',
+    thirdParagraph: 'This is a test for the third paragraph',
+}
+data.push(myArticle)
+
 data.forEach(obj => {
     const { title, date, firstParagraph, secondParagraph, thirdParagraph } = obj
     const article = articleMaker(title, date, firstParagraph, secondParagraph, thirdParagraph)
