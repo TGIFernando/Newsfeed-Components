@@ -45,8 +45,15 @@ function menuMaker(data) {
     mainDiv.classList.add('menu')
     mainDiv.appendChild(list)
 
-    //
+    //adding click event
+    const menuButton = document.querySelector('.menu-button')
+    menuButton.addEventListener('click', () => {
+        mainDiv.classList.toggle('menu--open')
+    })
 
+    //returning div
     return mainDiv
 }
-console.log(menuMaker(menuItems))
+let head = document.querySelector('.header')
+let menu1 = menuMaker(menuItems)
+head.appendChild(menu1)
